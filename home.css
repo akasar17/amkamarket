@@ -1,0 +1,304 @@
+/* Navbar */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: #fff;
+    padding: 20px;
+  }
+  
+  nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav li {
+    margin: 0 10px;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  .logo img {
+    height: 80px; /* Increase the height of the logo */
+  }
+  
+  /* Media query for navbar */
+  @media (max-width: 768px) {
+    nav {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    nav ul {
+      flex-direction: column;
+    }
+  
+    nav li {
+      margin: 10px 0;
+    }
+  }
+
+  
+  /* Default styles for figure element */
+figure {
+    display: grid;
+    border-radius: 1rem;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+figure > * {
+    grid-area: 1;
+    transition: 0.4s;
+}
+
+figure figcaption {
+    display: grid;
+    align-items: end;
+    font-family: sans-serif;
+    font-size: 2.3rem;
+    font-weight: bold;
+    color: #000 0;
+    padding: 0.75rem;
+    background: var(--c, #000 9);
+    clip-path: inset(0 var(--_i, 100%) 0 0);
+    
+}
+
+figure:hover figcaption {
+    --_i: 0%;
+}
+
+figure:hover img {
+    transform: scale(1.2);
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    figure {
+        display: block;
+        border-radius: 0;
+    }
+
+    figure img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    figure figcaption {
+        font-size: 1.6rem;
+        padding: 0.5rem;
+    }
+}
+
+/* Media query for larger screens */
+@media (min-width: 1200px) {
+    figure figcaption {
+        font-size: 3rem;
+        padding: 1rem;
+    }
+}
+
+/* Styles for browsers that don't support -webkit-mask-clip */
+@supports not (-webkit-mask-clip: text) {
+    figure figcaption {
+        
+        color: #fff;
+    }
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+    
+  }
+  
+  .card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .card a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .card-content {
+    padding: 20px;
+  }
+  
+  .card h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #333;
+  }
+  
+  .card p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #777;
+  }
+  
+
+  footer {
+    background-color: black;
+    color: #fff;
+    font-size: 16px;
+    padding: 50px 0;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    
+  }
+  
+  .col {
+    flex-basis: calc(33.33% - 20px);
+    margin-bottom: 30px;
+    
+
+  }
+  
+  .col h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .col p,
+  .col ul {
+    margin-bottom: 0;
+  }
+  
+  .col ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .col ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .col ul li i {
+    margin-right: 10px;
+    font-size: 20px;
+  }
+  
+  .social-icons {
+    display: flex;
+    align-items: center;
+  }
+  
+  .social-icons li {
+    margin-right: 10px;
+  }
+  
+  .social-icons li:last-child {
+    margin-right: 0;
+  }
+  
+  .social-icons a {
+    color: #fff;
+    font-size: 20px;
+  }
+  
+  .social-icons a:hover {
+    color: #0099ff;
+  }
+  
+  /* Media queries for responsive design */
+  
+  /* On screens smaller than 576px, adjust font size and make columns stack vertically */
+  @media (max-width: 576px){
+    footer {
+      font-size: 14px;
+    }
+  } 
+  @media (max-width: 576px) {
+    footer {
+      font-size: 14px;
+    }
+    
+    .col {
+      flex-basis: 100%;
+      max-width: 100%;
+      text-align: center;
+      justify-content: center;
+    }
+    
+    .social-icons {
+      justify-content: center;
+    }
+    
+    .social-icons li {
+      margin-right: 5px;
+    }
+  }
+  
+  .col.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .col.contact p {
+    text-align: center;
+  }
+  /* On screens larger than 576px and smaller than 992px, adjust flex-basis for columns */
+  @media (min-width: 576px) and (max-width: 991px) {
+    .col {
+      flex-basis: calc(50% - 20px);
+          }
+  }
+  
+  /* On screens larger than 992px, adjust flex-basis and max-width for columns */
+  @media (min-width: 992px) {
+    .col {
+      flex-basis: calc(33.33% - 20px);
+      max-width: 300px;
+    }
+  }
+  
+        
+    

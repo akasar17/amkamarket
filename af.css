@@ -1,0 +1,311 @@
+
+  
+/* Navbar */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: #fff;
+    padding: 20px;
+  }
+  
+  nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav li {
+    margin: 0 10px;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  .logo img {
+    height: 80px; /* Increase the height of the logo */
+  }
+  
+  /* Media query for navbar */
+  @media (max-width: 768px) {
+    nav {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    nav ul {
+      flex-direction: column;
+    }
+  
+    nav li {
+      margin: 10px 0;
+    }
+  }
+    
+    
+    
+  
+  
+  
+    
+  
+  footer {
+    background-color: black;
+    color: #fff;
+    font-size: 16px;
+    padding: 50px 0;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .col {
+    flex-basis: calc(33.33% - 20px);
+    margin-bottom: 30px;
+  }
+  
+  .col h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .col p,
+  .col ul {
+    margin-bottom: 0;
+  }
+  
+  .col ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .col ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .col ul li i {
+    margin-right: 10px;
+    font-size: 20px;
+  }
+  
+  .social-icons {
+    display: flex;
+    align-items: center;
+  }
+  
+  .social-icons li {
+    margin-right: 10px;
+  }
+  
+  .social-icons li:last-child {
+    margin-right: 0;
+  }
+  
+  .social-icons a {
+    color: #fff;
+    font-size: 20px;
+  }
+  
+  .social-icons a:hover {
+    color: #0099ff;
+  }
+  
+  /* Media queries for responsive design */
+  
+  /* On screens smaller than 576px, adjust font size and make columns stack vertically */
+  @media (max-width: 576px) {
+    footer {
+      font-size: 14px;
+    }
+    
+    .col {
+      flex-basis: 100%;
+      max-width: 100%;
+      text-align: center;
+    }
+    
+    .social-icons {
+      justify-content: center;
+    }
+    
+    .social-icons li {
+      margin-right: 5px;
+    }
+  }
+  
+  .col.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .col.contact p {
+    text-align: center;
+  }
+  /* On screens larger than 576px and smaller than 992px, adjust flex-basis for columns */
+  @media (min-width: 576px) and (max-width: 991px) {
+    .col {
+      flex-basis: calc(50% - 20px);
+    }
+  }
+  
+  /* On screens larger than 992px, adjust flex-basis and max-width for columns */
+  @media (min-width: 992px) {
+    .col {
+      flex-basis: calc(33.33% - 20px);
+      max-width: 300px;
+    }
+  }
+  
+        
+    
+
+
+
+  * {
+    box-sizing: border-box;
+  }
+  
+  /* Add a gray background color with some padding */
+  body {
+    font-family: Arial;
+    padding: 20px;
+    background: #f1f1f1;
+  }
+  
+  /* Header/Blog Title */
+  .header {
+    padding: 30px;
+    font-size: 40px;
+    text-align: center;
+    background: white;
+  }
+  
+  /* Create two unequal columns that floats next to each other */
+  /* Left column */
+  .leftcolumn {   
+    float: left;
+    width: 75%;
+  }
+  
+  /* Right column */
+  .rightcolumn {
+    float: left;
+    width: 25%;
+    padding-left: 20px;
+  }
+  
+  /* Fake image */
+ 
+  
+  /* Add a card effect for articles */
+  .card {
+     background-color: white;
+     padding: 20px;
+     margin-top: 20px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  .card img {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {   
+      width: 100%;
+      padding: 0;
+    }
+  }
+
+
+
+
+
+  .btn {
+    width: 140px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: none;
+    position: relative;
+    background-color: transparent;
+    transition: .2s cubic-bezier(0.19, 1, 0.22, 1);
+    opacity: 0.6;
+  }
+  
+  .btn::after {
+    content: '';
+    border-bottom: 3px double rgb(214, 207, 113);
+    width: 0;
+    height: 100%;
+    position: absolute;
+    margin-top: -5px;
+    top: 0;
+    left: 5px;
+    visibility: hidden;
+    opacity: 1;
+    transition: .2s linear;
+  }
+  
+  .btn .icon {
+    transform: translateX(0%);
+    transition: .2s linear;
+    animation: attention 1.2s linear infinite;
+  }
+  
+  .btn:hover::after {
+    visibility: visible;
+    opacity: 0.7;
+    width: 90%;
+  }
+  
+  .btn:hover {
+    letter-spacing: 2px;
+    opacity: 1;
+  }
+  
+  .btn:hover > .icon {
+    transform: translateX(30%);
+    animation: none;
+  }
+  
+  @keyframes attention {
+    0% {
+      transform: translateX(0%);
+    }
+  
+    50% {
+      transform: translateX(30%);
+    }
+  }
+  

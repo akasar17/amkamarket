@@ -1,0 +1,238 @@
+
+  
+/* Navbar */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: #fff;
+    padding: 20px;
+  }
+  
+  nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav li {
+    margin: 0 10px;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  .logo img {
+    height: 80px; /* Increase the height of the logo */
+  }
+  
+  /* Media query for navbar */
+  @media (max-width: 768px) {
+    nav {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    nav ul {
+      flex-direction: column;
+    }
+  
+    nav li {
+      margin: 10px 0;
+    }
+  }
+    
+    
+    
+  .grid {
+    position: relative;
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    grid-gap: 20px;
+    align-items: stretch;
+  }
+  
+  .grid > article {
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+  }
+  
+  .grid > article img {
+    max-width: 100%;
+  }
+  
+  .text {
+    padding: 0 20px 20px;
+  }
+  
+  .text > button {
+    background: black;
+    border: 0;
+    color: white;
+    padding: 10px;
+    width: 100%;
+  }
+  
+  /* Media queries for responsive design */
+  
+  @media (max-width: 576px) {
+    .grid {
+      grid-template-columns: 1fr;
+      grid-gap: 10px;
+    }
+  }
+  
+  @media (min-width: 577px) and (max-width: 991px) {
+    .grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-gap: 15px;
+    }
+  }
+  
+  @media (min-width: 992px) and (max-width: 1199px) {
+    .grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      grid-gap: 20px;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .grid {
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      grid-gap: 30px;
+    }
+  }
+  
+  
+    
+  
+  footer {
+    background-color: #333;
+    color: #fff;
+    font-size: 16px;
+    padding: 50px 0;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .col {
+    flex-basis: calc(33.33% - 20px);
+    margin-bottom: 30px;
+  }
+  
+  .col h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .col p,
+  .col ul {
+    margin-bottom: 0;
+  }
+  
+  .col ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .col ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .col ul li i {
+    margin-right: 10px;
+    font-size: 20px;
+  }
+  
+  .social-icons {
+    display: flex;
+    align-items: center;
+  }
+  
+  .social-icons li {
+    margin-right: 10px;
+  }
+  
+  .social-icons li:last-child {
+    margin-right: 0;
+  }
+  
+  .social-icons a {
+    color: #fff;
+    font-size: 20px;
+  }
+  
+  .social-icons a:hover {
+    color: #0099ff;
+  }
+  
+  /* Media queries for responsive design */
+  
+  /* On screens smaller than 576px, adjust font size and make columns stack vertically */
+  @media (max-width: 576px) {
+    footer {
+      font-size: 14px;
+    }
+    
+    .col {
+      flex-basis: 100%;
+      max-width: 100%;
+      text-align: center;
+    }
+    
+    .social-icons {
+      justify-content: center;
+    }
+    
+    .social-icons li {
+      margin-right: 5px;
+    }
+  }
+  
+  .col.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .col.contact p {
+    text-align: center;
+  }
+  /* On screens larger than 576px and smaller than 992px, adjust flex-basis for columns */
+  @media (min-width: 576px) and (max-width: 991px) {
+    .col {
+      flex-basis: calc(50% - 20px);
+    }
+  }
+  
+  /* On screens larger than 992px, adjust flex-basis and max-width for columns */
+  @media (min-width: 992px) {
+    .col {
+      flex-basis: calc(33.33% - 20px);
+      max-width: 300px;
+    }
+  }
+  
+        
+    
